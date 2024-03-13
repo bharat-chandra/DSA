@@ -10,6 +10,12 @@ public class SingleLL {
 
     public void insertAtFirst(int value){
         Node node = new Node(value);
+        if(head==null){
+            head=node;
+            tail=node;
+            size++;
+            return;
+        }
         node.next = head;
         head = node;
         if(tail == null){
